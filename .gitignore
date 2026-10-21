@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Licensed Orbis data — never upload
+data/raw/
+data/interim/
+data/processed/company_level/
+
+# Local files
+.DS_Store
+.env
+.ipynb_checkpoints/
+__pycache__/
