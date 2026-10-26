@@ -140,9 +140,13 @@ df["assets_usd"] = df["assets_th_usd"] * 1000
 # Construct log total assets
 # --------------------------------------------------
 
-# where() replaces non-positive assets with NaN before taking logs.
-df["log_assets"] = np.log(
-    df["assets_usd"].where(df["assets_usd"] > 0)
+# Take logs only for strictly positive assets. Building the output in two
+# steps avoids divide-by-zero warnings while preserving non-positive values
+# as missing for the downstream analysis.
+positive_assets = df["assets_usd"].fillna(0).gt(0)
+df["log_assets"] = np.nan
+df.loc[positive_assets, "log_assets"] = np.log(
+    df.loc[positive_assets, "assets_usd"].astype("float64")
 )
 
 

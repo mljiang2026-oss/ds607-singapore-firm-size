@@ -219,15 +219,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Licensed Orbis data — never upload
-data/raw/orbis/*
-!data/raw/orbis/.gitkeep
-
-data/interim/*
-!data/interim/.gitkeep
-
-data/processed/*
-!data/processed/.gitkeep
+# Project data are intentionally versioned in this private course repository.
+# Reassess these rules before changing the repository visibility or sharing it
+# outside the authorised project team.
 
 # macOS
 .DS_Store
