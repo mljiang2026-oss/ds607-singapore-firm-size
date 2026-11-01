@@ -1,0 +1,14 @@
+statistic,value
+Listed firms,496
+Matched sets,353
+Unmatched: no private firm in stratum,89
+Unmatched: stratum exhausted,54
+Age SMD before,0.851
+Age SMD after,0.11
+Sign test: share listed larger,0.864
+Sign test one-sided p,3.59e-47
+Median D (ln),2.014
+Median ratio,7.49
+Permutation one-sided p,0.0001
+Bootstrap 95% CI low (ratio),5.9
+Bootstrap 95% CI high (ratio),10.51
