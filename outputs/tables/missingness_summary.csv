@@ -1,0 +1,35 @@
+,Data Type,Missing Count,Missing (%)
+Company name Latin alphabet,string,0,0.0
+Inactive,string,0,0.0
+Quoted,string,0,0.0
+branch,string,0,0.0
+OwnData,string,0,0.0
+Woco,string,0,0.0
+country_code,string,0,0.0
+nace4,string,0,0.0
+consolidation_code,string,0,0.0
+bvd_id,string,0,0.0
+incorporation_date,datetime64[us],0,0.0
+assets_th_usd,Float64,0,0.0
+Total assets th USD 2022,string,0,0.0
+revenue_th_usd,Float64,310,0.66
+Operating revenue (Turnover) th USD 2022,string,0,0.0
+employees,Int64,46684,99.42
+Number of employees 2022,string,0,0.0
+ish_bvd_id,string,6850,14.59
+guo_bvd_id,string,5549,11.82
+ISH - Name,string,6850,14.59
+GUO - Name,string,5549,11.82
+SH - BvD Independence Indicator,string,0,0.0
+listing_status,string,0,0.0
+status,string,0,0.0
+Closing date Last avail. yr,string,0,0.0
+closing_date_2023,datetime64[us],0,0.0
+Closing date 2022,string,11239,23.94
+_source_file,str,0,0.0
+incorporation_year,Int64,0,0.0
+listed,Int64,0,0.0
+is_listed_subsidiary,boolean,0,0.0
+assets_usd,Float64,0,0.0
+log_assets,float64,506,1.08
+nace2,string,0,0.0

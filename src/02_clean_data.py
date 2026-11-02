@@ -103,16 +103,37 @@ for column in numeric_columns:
 # Convert date variables
 # --------------------------------------------------
 
-date_columns = [
-    "incorporation_date",
-    "closing_date_2023",
-]
+# Orbis records incorporation dates in mixed formats. In particular, many
+# firms have only a four-digit year (for example, "2006"). A direct
+# pd.to_datetime conversion can turn those values into missing dates, so keep
+# the incorporation year explicitly and use 1 January as a harmless placeholder
+# date when only the year is available. Downstream matching uses the year, not
+# the placeholder day or month.
+incorporation_text = (
+    df["incorporation_date"]
+    .astype("string")
+    .str.strip()
+)
 
-for column in date_columns:
-    df[column] = pd.to_datetime(
-        df[column],
-        errors="coerce",
-    )
+df["incorporation_year"] = pd.to_numeric(
+    incorporation_text.str.extract(r"((?:18|19|20)\d{2})", expand=False),
+    errors="coerce",
+).astype("Int64")
+
+parsed_incorporation_date = pd.to_datetime(
+    incorporation_text,
+    errors="coerce",
+)
+year_start_date = pd.to_datetime(
+    df["incorporation_year"].astype("string") + "-01-01",
+    errors="coerce",
+)
+df["incorporation_date"] = parsed_incorporation_date.fillna(year_start_date)
+
+df["closing_date_2023"] = pd.to_datetime(
+    df["closing_date_2023"],
+    errors="coerce",
+)
 
 
 # --------------------------------------------------
@@ -127,6 +148,29 @@ df["listed"] = (
     })
     .astype("Int64")
 )
+
+
+# --------------------------------------------------
+# Flag private subsidiaries of sampled listed firms
+# --------------------------------------------------
+
+# The proposal excludes private firms whose immediate shareholder (ISH) or
+# global ultimate owner (GUO) is one of the sampled listed firms. Retaining a
+# flag, rather than deleting rows here, preserves a transparent audit trail
+# while allowing every downstream analysis to use the same exclusion rule.
+listed_ids = set(
+    df.loc[df["listed"].eq(1), "bvd_id"]
+    .dropna()
+    .astype("string")
+)
+owner_is_sampled_listed = (
+    df["ish_bvd_id"].isin(listed_ids)
+    | df["guo_bvd_id"].isin(listed_ids)
+)
+df["is_listed_subsidiary"] = (
+    df["listed"].eq(0)
+    & owner_is_sampled_listed
+).astype("boolean")
 
 
 # --------------------------------------------------
@@ -187,8 +231,18 @@ print(
     f"{df['incorporation_date'].isna().sum():,}"
 )
 print(
+    f"Missing incorporation years: "
+    f"{df['incorporation_year'].isna().sum():,}"
+)
+print(
     f"Missing 2023 closing dates: "
     f"{df['closing_date_2023'].isna().sum():,}"
+)
+
+print("\nSubsidiary exclusion flag:")
+print(
+    "Private subsidiaries of sampled listed firms: "
+    f"{df['is_listed_subsidiary'].sum():,}"
 )
 
 

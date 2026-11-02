@@ -1,0 +1,7 @@
+Listing Status,Variable,Total Firms,Available,Missing,Missing (%)
+Listed,assets_th_usd,496,496,0,0.0
+Listed,revenue_th_usd,496,493,3,0.6
+Listed,employees,496,267,229,46.17
+Unlisted,assets_th_usd,46458,46458,0,0.0
+Unlisted,revenue_th_usd,46458,46151,307,0.66
+Unlisted,employees,46458,3,46455,99.99
