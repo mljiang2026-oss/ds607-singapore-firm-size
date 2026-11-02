@@ -1,0 +1,5 @@
+Listing Status,Variable,Total Firms,Missing,Zero,Negative,Positive below USD 1,Valid Positive
+Listed,assets_th_usd,496,0,0,0,0,496
+Listed,revenue_th_usd,496,3,2,0,0,491
+Unlisted,assets_th_usd,46458,0,487,19,204,45952
+Unlisted,revenue_th_usd,46458,307,9746,54,115,36351
