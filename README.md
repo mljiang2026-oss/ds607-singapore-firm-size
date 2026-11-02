@@ -60,11 +60,16 @@ Within each stratum, controls closest in actual firm age are allocated round-rob
 
 ### 3. Matched inference
 
-For matched set \(i\), the analysis uses
+For matched set $i$, the analysis uses
 
-\[
-D_i = \log(\text{listed assets}) - \operatorname{mean}\{\log(\text{private-control assets})\}.
-\]
+$$
+D_i = \log\!\left(A_i^{(L)}\right)
+- \frac{1}{m_i}\sum_{j=1}^{m_i}\log\!\left(A_{ij}^{(P)}\right),
+$$
+
+where $A_i^{(L)}$ is the listed firm's total assets, $A_{ij}^{(P)}$ is the
+total assets of private control $j$, and $m_i$ is the number of matched private
+controls in set $i$.
 
 The project reports:
 
@@ -117,6 +122,11 @@ Selected figures:
 ![ECDF of log total assets by listing status](outputs/figures/log_assets_ecdf.png)
 
 ![Firm age composition by listing status](outputs/figures/age_band_composition.png)
+
+Final presentation:
+
+- [`DS607_GP_01548385_slides.pptx`](outputs/presentation/DS607_GP_01548385_slides.pptx)
+- [`DS607_GP_01548385_slides.pdf`](outputs/presentation/DS607_GP_01548385_slides.pdf)
 
 ## Repository map
 
