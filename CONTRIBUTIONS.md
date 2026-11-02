@@ -2,9 +2,9 @@
 
 The project was completed by the following DS607 group members:
 
-- Jiang Minglan (Mina), 01548385
+- Su Liangyu, 01564113
 - Nicolyne Tiana Lie, 01577376
-- Su Liang-Yu, 01564113
+- Jiang Minglan, 01548385
 
 ## Division of work
 
