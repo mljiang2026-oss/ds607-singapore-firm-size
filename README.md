@@ -4,9 +4,9 @@
 
 ## Group members
 
-- Jiang Minglan (Mina), 01548385
-- Nicolyne Tiana Lie, 01577376
-- Su Liang-Yu, 01564113
+- Su Liangyu, 01564113
+-  Nicolyne Tiana Lie, 01577376
+- Jiang Minglan, 01548385
 
 This repository is the report for an MDSE group project. It contains the data-preparation code, exploratory analysis, statistical inference, robustness checks, aggregate outputs, and reproducibility instructions.
 
