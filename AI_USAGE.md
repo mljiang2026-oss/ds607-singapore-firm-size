@@ -6,7 +6,7 @@ The group used OpenAI ChatGPT/Codex and Anthropic Claude as coding and writing a
 
 ## How the tools were used
 
-Generative AI was used to help translate the group's research plan into Python, draft and debug parts of the data-cleaning, exploratory-analysis, matching, inference, bootstrap, permutation-test, and robustness code, and improve the clarity of documentation and result interpretations. Substantial portions of the initial code were suggested by an AI tool in response to the team's specified research question, matching rules, statistical methods, and desired outputs.
+Generative AI was used to help translate the group's research plan into Python, draft and debug parts of the data-cleaning, exploratory-analysis, matching, inference, bootstrap, permutation-test, and robustness code, and improve the clarity of documentation and result interpretations. It also helped draft the initial presentation structure, wording, editable charts, and speaker notes from the group's verified aggregate results. Substantial portions of the initial code were suggested by an AI tool in response to the team's specified research question, matching rules, statistical methods, and desired outputs.
 
 The group, rather than the AI tools, selected the research question, obtained the Orbis data, decided the sample restrictions, chose the matching variables and robustness specifications, and made the final modelling and reporting decisions.
 
@@ -22,7 +22,7 @@ Group members executed the code themselves in the project environment and did no
 - fixing incorporation-year parsing and nullable-value errors encountered during execution;
 - re-running notebooks from top to bottom with fixed random seeds;
 - checking sign-test, permutation-test, bootstrap, quantile-gap, and robustness results for consistency; and
-- revising AI-drafted explanations to match the executed results and the group's intended interpretation.
+- revising AI-drafted explanations and presentation slides to match the executed results and the group's intended interpretation.
 
 All final outputs, modelling choices, interpretations, and any remaining errors are the responsibility of the group members. The results are reported as associations and not as causal effects.
 
