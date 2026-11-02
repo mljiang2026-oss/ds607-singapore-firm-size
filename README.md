@@ -62,10 +62,9 @@ Within each stratum, controls closest in actual firm age are allocated round-rob
 
 For matched set $i$, the analysis uses
 
-$$
-D_i = \log\!\left(A_i^{(L)}\right)
-- \frac{1}{m_i}\sum_{j=1}^{m_i}\log\!\left(A_{ij}^{(P)}\right),
-$$
+\[
+D_i=\log(A_i^{(L)})-\frac{1}{m_i}\sum_{j=1}^{m_i}\log(A_{ij}^{(P)})
+\]
 
 where $A_i^{(L)}$ is the listed firm's total assets, $A_{ij}^{(P)}$ is the
 total assets of private control $j$, and $m_i$ is the number of matched private
