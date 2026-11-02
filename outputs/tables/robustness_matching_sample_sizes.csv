@@ -1,0 +1,6 @@
+Matching Specification,Listed before matching,Unlisted before matching,Eligible listed,Eligible unlisted,Matched listed,Unmatched listed,Matched controls,Excluded below USD 1
+Up to 3 controls,496,45952,496,45952,351,145,777,0
+1 control,496,45952,496,45952,351,145,351,0
+Assets ≥ USD 1,496,45748,496,45748,351,145,777,204
+Age gap ≤ 15 years,496,45952,496,45952,341,155,748,0
+Age gap ≤ 10 years,496,45952,496,45952,338,158,734,0
