@@ -17,3 +17,4 @@ The project was completed by the following DS607 group members:
 | Presentation slides | Jiang Minglan | Led the preparation and organisation of the final presentation deck. |
 
 All members are responsible for reviewing the final repository, checking the accuracy of the interpretation, and being able to explain the methods and results presented by the group.
+Each of us contributes equally
